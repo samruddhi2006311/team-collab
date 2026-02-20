@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillSync - Career Recommendations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Interactive scaling for career cards */
+        .career-card-hover:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .career-card-active:active, .career-card-active:focus {
+            transform: scale(1.1);
+            z-index: 20;
+            outline: 2px solid #258cf4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-xl font-bold leading-tight tracking-tight">SkillSync</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest">Syncing Your Potential</p>
+</div>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#assessment">Assessment</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#results">Results</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#resources">Resources</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#profile">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="rounded-full size-10 ring-2 ring-primary ring-offset-2 ring-offset-background-dark overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSvt4jtkJGvQrbqyqa1vdxd-jwJpInjJc372j4rFhilrJ3aJcmY_cYYBx23dDqLKNSqxmQZBV7z_fkijm-V6IKxqUph6Wsh1lRxPF14WQMgR5VTVJkAW8Jn0CWQrA20dtOexIaaCpXELNzeKTtHDeVEIXFIQC2Bc0xuLKnQVz9wbWhcfQSNTUnqZGyiYjMv_pc6Dh8Rrrv22DpCbPCfwnpGjvbFMpOf-Q6rqPmPIENDQGqkOPOqF_e9V2cZU4wGgX2QD_0RmRpNG8_"/>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col px-6 md:px-20 py-8 gap-10 max-w-[1440px] mx-auto w-full">
+<!-- Hero / Carousel Section -->
+<section class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-bold tracking-tight">Top Highlights</h2>
+<p class="text-slate-500 dark:text-slate-400">Based on your recent skill assessment</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-slate-700 hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-slate-700 hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4 -mx-2 px-2 snap-x">
+<!-- Carousel Item 1 -->
+<div class="min-w-[320px] md:min-w-[600px] h-[350px] relative rounded-xl overflow-hidden snap-start group cursor-pointer shadow-2xl">
+<img alt="Tech Highlight" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Person coding on a laptop with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA79HN7EzQPtizvMDHobYQKScALCyPySEaXW93JLWwxyCze746ivAYCi4ctj_dkCxTV0hzuwg1kk6WGiZMI0WywMzv9U1sl65Nvv14-V8FyMWeqiShHMS8vk9VGLsPxM-2eqKMpj9f41C7opDrrLHhs41Z5eHX2638b5-oaNqJxpZh9EvnbW4FtmEroOLdN-TNQJs2G9DBoFMogEf1QHRrlWNNLIK9WEWYx6K4RNS-LdYcIlPRBpgxiZHZgVdVNC9tWA1VK-YS9Zxp-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">98% Match</span>
+<h3 class="text-2xl font-bold text-white mb-2">Senior Full Stack Architect</h3>
+<p class="text-slate-300 text-sm max-w-md line-clamp-2">Leverage your expertise in React and Node.js to build scalable cloud infrastructures.</p>
+</div>
+</div>
+<!-- Carousel Item 2 -->
+<div class="min-w-[320px] md:min-w-[600px] h-[350px] relative rounded-xl overflow-hidden snap-start group cursor-pointer shadow-2xl">
+<img alt="Design Highlight" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern UI design interface on a screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKtBHWjOxRiCJsV15Tw7rR4vajraskwnQc9KdCUBqempVHhEhEtouv8xu-am7Ps6zlwr6kyCcuu_6rTO3JBeLXnE0su3YrOk8B2mMDN0YYZkP1y7ELKPOL0AOjB_yNvNgyhfvQflNuvxzzKkyn7j-x7mdN7xS1n42F00I-wOvpzbBV6sOklV5Zta12WmZvtz90NCZxry1ULiZt5suTQYixuHqds24wlCIbHqJnIDHdHlReLDEGD6XuDsA-F8SM8V5lF_nnXRamOahn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">95% Match</span>
+<h3 class="text-2xl font-bold text-white mb-2">UX Research &amp; Design Lead</h3>
+<p class="text-slate-300 text-sm max-w-md line-clamp-2">Your analytical skills and visual intuition make you a perfect fit for high-end product design.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommendations Grid -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h2 class="text-2xl font-bold">Recommended Career Paths</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Career Card 1 -->
+<div class="group career-card-hover career-card-active transition-all duration-300 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col gap-4 cursor-pointer hover:shadow-xl hover:shadow-primary/10">
+<div class="flex justify-between items-start">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined font-bold">terminal</span>
+</div>
+<span class="text-xs font-bold text-slate-400">#1</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Software Engineer</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Systems &amp; Architecture</p>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Growth</span>
+<span class="text-green-500 font-medium">+22% YoY</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-primary">92% Match</span>
+<button class="text-xs font-bold bg-primary text-white px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">LEARN MORE</button>
+</div>
+</div>
+</div>
+<!-- Career Card 2 -->
+<div class="group career-card-hover career-card-active transition-all duration-300 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col gap-4 cursor-pointer hover:shadow-xl hover:shadow-primary/10">
+<div class="flex justify-between items-start">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined font-bold">query_stats</span>
+</div>
+<span class="text-xs font-bold text-slate-400">#2</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Data Scientist</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">ML &amp; AI Pipelines</p>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Growth</span>
+<span class="text-green-500 font-medium">+35% YoY</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-primary">88% Match</span>
+<button class="text-xs font-bold bg-primary text-white px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">LEARN MORE</button>
+</div>
+</div>
+</div>
+<!-- Career Card 3 -->
+<div class="group career-card-hover career-card-active transition-all duration-300 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col gap-4 cursor-pointer hover:shadow-xl hover:shadow-primary/10">
+<div class="flex justify-between items-start">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined font-bold">palette</span>
+</div>
+<span class="text-xs font-bold text-slate-400">#3</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Product Designer</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Visuals &amp; Prototyping</p>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Growth</span>
+<span class="text-green-500 font-medium">+15% YoY</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[84%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-primary">84% Match</span>
+<button class="text-xs font-bold bg-primary text-white px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">LEARN MORE</button>
+</div>
+</div>
+</div>
+<!-- Career Card 4 -->
+<div class="group career-card-hover career-card-active transition-all duration-300 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col gap-4 cursor-pointer hover:shadow-xl hover:shadow-primary/10">
+<div class="flex justify-between items-start">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined font-bold">security</span>
+</div>
+<span class="text-xs font-bold text-slate-400">#4</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Security Analyst</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Cloud Defense</p>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Growth</span>
+<span class="text-green-500 font-medium">+40% YoY</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[81%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-primary">81% Match</span>
+<button class="text-xs font-bold bg-primary text-white px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">LEARN MORE</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Section -->
+<section class="mt-8 p-8 rounded-2xl bg-primary/10 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h3 class="text-xl font-bold">Not seeing the perfect fit?</h3>
+<p class="text-slate-500 dark:text-slate-400">Refine your assessment with more specific project experience to get deeper insights.</p>
+</div>
+<a class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 whitespace-nowrap inline-block" href="careerform.html">
+                    RE-TAKE ASSESSMENT
+                </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 py-8 px-10 text-center">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="text-primary material-symbols-outlined">analytics</span>
+<span class="font-bold">SkillSync</span>
+<span class="text-slate-500 text-sm">© 2024</span>
+</div>
+<div class="flex gap-6 text-sm text-slate-500">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

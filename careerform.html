@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillSync - Career Navigator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3b4754;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-72 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">explore</span><a href="careerrec.html"></a>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">SkillSync</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Career Navigator</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto custom-scrollbar">
+<div class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 px-3 mb-2 tracking-widest">Main Menu</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">
+<span class="material-symbols-outlined">search</span>
+<span class="text-sm">Explore</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm">History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="text-sm">Saved</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">ios_share</span>
+<span class="text-sm">Your exports</span>
+</a>
+<div class="pt-8 text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 px-3 mb-2 tracking-widest">Preferences</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="text-sm">About us</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 flex flex-col gap-3">
+<p class="text-xs text-slate-600 dark:text-slate-300">Unlock advanced AI analysis and personalized mentoring.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 rounded-lg transition-all">
+                        Upgrade Plan
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark custom-scrollbar">
+<div class="max-w-4xl mx-auto px-8 py-12">
+<header class="mb-12">
+<h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight mb-4">
+                        A compass for education &amp; career choices
+                    </h2>
+<p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
+                        Discover your ideal career path by telling us about your unique personality, interests, and natural abilities.
+                    </p>
+</header>
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+<div class="p-8 space-y-8">
+<!-- Interests Input -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200">Tell us about your interests</h3>
+</div>
+<div class="relative">
+<textarea class="w-full min-h-[140px] p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="e.g. Graphic design, sustainable energy, creative writing, working with children, solving complex puzzles..."></textarea>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Digital Arts</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Environment</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Technology</span>
+</div>
+</div>
+</div>
+<!-- Abilities Input -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200">What are your core abilities?</h3>
+</div>
+<div class="relative">
+<textarea class="w-full min-h-[140px] p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="e.g. Mathematical logic, public speaking, coding, empathetic listening, fast learner, organizing people..."></textarea>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Problem Solving</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Communication</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Leadership</span>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 rounded-full border border-slate-200 dark:border-slate-700">Analytical Thinking</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="bg-slate-50 dark:bg-slate-800/30 p-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+                            Your data is used only for analysis
+                        </div>
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-primary/25 transition-all transform hover:scale-[1.02] active:scale-[0.98]" onclick="window.location.href='careerrec.html'">
+<span>Explore</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Secondary Features / Social Proof -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h4 class="font-bold mb-2">Academic Alignment</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Match your interests with top university programs worldwide.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<h4 class="font-bold mb-2">Market Trends</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Real-time demand data for different career paths and industries.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+<h4 class="font-bold mb-2">Skill Mapping</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Identify gaps in your profile and get learning recommendations.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillSync - Student Career Guidance Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(37, 140, 244, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(37, 140, 244, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 bg-primary rounded-lg shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-2xl">sync_alt</span>
+</div>
+<h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">SkillSync</h1>
+</div>
+<!-- Nav Links -->
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex text-sm font-bold px-6 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all items-center justify-center" href="login.html" title="Link to Login Page {{DATA:SCREEN:SCREEN_12}}">Log In</a>
+<a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all inline-flex items-center justify-center" href="signup.html" title="Link to Sign Up Page {{DATA:SCREEN:SCREEN_4}}">Sign Up</a>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+<div class="hero-gradient absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Hero Content -->
+<div class="flex flex-col space-y-8">
+<div class="space-y-4">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                                    Prototype v1.0 Live
+                                </span>
+<h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+                                    Information about <span class="text-primary">prototype</span>
+</h1>
+<p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                                    Empowering students with career guidance and creative skill synchronization. Map your future with real-time industry insights.
+                                </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 transition-all group" href="#" title="Link to Sign Up Page {{DATA:SCREEN:SCREEN_4}}">
+                                    Get started 
+                                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="flex flex-col items-center sm:items-start ml-0 sm:ml-4">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-500 mb-2 italic">If already visited the site</p>
+<div class="flex gap-4">
+<a class="text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-primary underline decoration-primary/30 underline-offset-4" href="#" title="Link to Sign Up Page {{DATA:SCREEN:SCREEN_4}}">New User</a>
+<a class="text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-primary underline decoration-primary/30 underline-offset-4" href="#" title="Link to Login Page {{DATA:SCREEN:SCREEN_12}}">Login</a>
+</div>
+</div>
+</div>
+<!-- Social Proof / Stats -->
+<div class="pt-8 grid grid-cols-3 gap-8 border-t border-slate-200 dark:border-slate-800">
+<div>
+<p class="text-2xl font-black text-slate-900 dark:text-white">12k+</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Students</p>
+</div>
+<div>
+<p class="text-2xl font-black text-slate-900 dark:text-white">450+</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Partners</p>
+</div>
+<div>
+<p class="text-2xl font-black text-slate-900 dark:text-white">98%</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Success</p>
+</div>
+</div>
+</div>
+<!-- Hero Visual / Animation Placeholder -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 glass-card flex items-center justify-center shadow-2xl">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<div class="flex flex-col items-center gap-6 p-12 text-center">
+<div class="size-32 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-6xl">animation</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Creative Prototype Animation</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Dynamic visualization of student career trajectories and skill mapping workflows will appear here.</p>
+</div>
+<!-- Decorative UI elements -->
+<div class="absolute top-8 left-8 size-24 rounded-lg bg-white/5 border border-white/10 backdrop-blur-md"></div>
+<div class="absolute bottom-12 right-12 size-32 rounded-lg bg-white/5 border border-white/10 backdrop-blur-md"></div>
+</div>
+<img alt="Data visualization dashboard" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="Abstract data visualization dashboard with glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjejZ_1uQfVbICKiUgcT30ME9vztPOMWaLCiWEZnuAlrxE-9jBcMK1fEACqffUphqsHNdn-3rSZl4Vvt2YKGpoEdemoRVrZmFcsdP-UAp5hm0edw6m14WC-PwGlg54Kmry0M2BxHG9kLwK7ZI1wrvsmB1NmqvV02ew73OhmII-jRNdhSv6fCY7HRfDVWi9Vpgd6p-1ehBR7KDY8kYsBVhwlk2JiFrYdwWgADEbwN4rpy7imdS7d33fWDsy6ZG3Rt3bZGZa7-p4kegy"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16 max-w-2xl">
+<h2 class="text-3xl lg:text-4xl font-black mb-4 text-slate-900 dark:text-white">Why Choose SkillSync?</h2>
+<p class="text-slate-600 dark:text-slate-400">Modern tools designed for the next generation of industry leaders and creative professionals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all group">
+<div class="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">map</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Career Mapping</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Visualize your journey from a student to a high-level professional with our interactive roadmap generator.
+                            </p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all group">
+<div class="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Skill Tracking</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Monitor your academic and creative progress with real-time analytics and automated skill-gap identification.
+                            </p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all group">
+<div class="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Expert Mentorship</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Connect directly with industry leaders and professional mentors for personalized career guidance.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">sync_alt</span>
+</div>
+<span class="text-lg font-bold text-slate-900 dark:text-white">SkillSync</span>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-bold text-slate-500 hover:text-primary uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-xs font-bold text-slate-500 hover:text-primary uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-xs font-bold text-slate-500 hover:text-primary uppercase tracking-widest" href="#">Contact Support</a>
+</div>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-900 text-center">
+<p class="text-xs text-slate-500">© 2024 SkillSync Platform. Empowering the future workforce.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
